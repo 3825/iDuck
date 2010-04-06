@@ -16,6 +16,28 @@
     <url-pattern>/iduck/greet</url-pattern>
   </servlet-mapping>
   
+	<filter>
+		<filter-name>appstats</filter-name>
+        <filter-class>com.google.appengine.tools.appstats.AppstatsFilter</filter-class>
+        <init-param>
+            <param-name>logMessage</param-name>
+            <param-value>Appstats available: /appstats/details?time={ID}</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>appstats</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
+	<security-constraint>
+		<web-resource-collection>
+			<url-pattern>/profile/*</url-pattern>
+		</web-resource-collection>
+		<user-data-constraint>
+			<transport-guarantee>CONFIDENTIAL</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+  
   <!-- Default page to serve -->
   <welcome-file-list>
     <welcome-file>IDuck.html</welcome-file>
