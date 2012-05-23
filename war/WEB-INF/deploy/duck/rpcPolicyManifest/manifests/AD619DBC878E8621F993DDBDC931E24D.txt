@@ -1,2 +1,0 @@
-serviceClass: com.appspot.duck.client.GreetingService
-path: C9BC870C22F1C29C52DE5F277E63813A.gwt.rpc

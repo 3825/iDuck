@@ -1,3 +1,0 @@
-# Module duck
-# RPC service class, partial path of RPC policy file
-com.appspot.duck.client.GreetingService, C9BC870C22F1C29C52DE5F277E63813A.gwt.rpc
